@@ -1,0 +1,5 @@
+C:\Users\chad\prj\encoder\rle\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\chad\prj\encoder\rle\bin\Debug\rle.dll
+C:\Users\chad\prj\encoder\rle\bin\Debug\rle.pdb
+C:\Users\chad\prj\encoder\rle\obj\Debug\rle.dll
+C:\Users\chad\prj\encoder\rle\obj\Debug\rle.pdb
