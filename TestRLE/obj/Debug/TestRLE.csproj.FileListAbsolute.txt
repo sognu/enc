@@ -7,3 +7,12 @@ C:\Users\chad\prj\encoder\TestRLE\bin\Debug\rle_Accessor.dll
 C:\Users\chad\prj\encoder\TestRLE\bin\Debug\rle_Accessor.pdb
 C:\Users\chad\prj\encoder\TestRLE\obj\Debug\TestRLE.dll
 C:\Users\chad\prj\encoder\TestRLE\obj\Debug\TestRLE.pdb
+C:\Users\chad\rep\encoder\TestRLE\bin\Debug\TestRLE.dll
+C:\Users\chad\rep\encoder\TestRLE\bin\Debug\TestRLE.pdb
+C:\Users\chad\rep\encoder\TestRLE\bin\Debug\rle.dll
+C:\Users\chad\rep\encoder\TestRLE\bin\Debug\rle.pdb
+C:\Users\chad\rep\encoder\TestRLE\bin\Debug\rle_Accessor.dll
+C:\Users\chad\rep\encoder\TestRLE\bin\Debug\rle_Accessor.pdb
+C:\Users\chad\rep\encoder\TestRLE\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\chad\rep\encoder\TestRLE\obj\Debug\TestRLE.dll
+C:\Users\chad\rep\encoder\TestRLE\obj\Debug\TestRLE.pdb

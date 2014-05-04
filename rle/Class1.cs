@@ -13,9 +13,8 @@ namespace rle
         BinaryWriter wrt;
         const int COUNT_MAX = 127;
 
-        /// <summary>
-        /// Bit level rle encoder
-        /// </summary>
+
+        // Bit level rle encoder
         public int rle_encode(string in_f, string out_f)
         {
             byte[] file;
@@ -65,10 +64,6 @@ namespace rle
                 run_end(ref bit_count, ref prev_bit, ref curr_bit);
             }
 
-            //rdr.Close();
-            //wrt.Close();
-            //return 1;
-
         END:
             rdr.Close();
             wrt.Close();
@@ -88,16 +83,22 @@ namespace rle
             int bite = 0;
             int bite_index = 7;
 
-            while ((curr_char = rdr.ReadByte()) != 0 && (rdr.BaseStream.Position != rdr.BaseStream.Length))
+            while (true)
             {
-                curr_bit = (curr_char >> 7) & 1;
-                bit_count = (curr_char & 0x7F);
-                write_count(ref bit_count, ref bite_index, ref bite, curr_bit);
+                try
+                {
+                    curr_char = rdr.ReadByte();
+                    curr_bit = (curr_char >> 7) & 1;
+                    bit_count = (curr_char & 0x7F);
+                    write_count(ref bit_count, ref bite_index, ref bite, curr_bit);
+                }
+                catch (EndOfStreamException)
+                {
+                    rdr.Close();
+                    wrt.Close();
+                    return 1;
+                }
             }
-
-            rdr.Close();
-            wrt.Close();
-            return 1;
         }
 
         private int get_bit(ref int curr_char, ref int index)
@@ -105,13 +106,15 @@ namespace rle
             int[] bit_array = new int[8];
             if (index == -1)
             {
-                curr_char = rdr.ReadByte();
-
-                if (rdr.BaseStream.Position >= rdr.BaseStream.Length)
+                try
+                {
+                    curr_char = rdr.ReadByte();
+                }
+                catch (EndOfStreamException)
                 {
                     return -1;
                 }
-
+            
                 index = 7;
                 to_array(curr_char, ref bit_array);
                 return bit_array[index];
@@ -168,7 +171,6 @@ namespace rle
             int i;
             for (i = 7; i >= 0; i--)
             {
-                //int temp = curr_char >> i;
                 bit_array[i] = ((curr_char) >> i) & 0x1;
             }
         }
@@ -220,16 +222,6 @@ namespace rle
                 return null;
             }
             return wrt;
-        }
-
-        private int pow(int x, int y){
-
-            int i = 0;
-            for(;i < y; i++){
-                x*=x;
-            }
-            return x;
-
         }
     }
 }
