@@ -1,2 +1,2 @@
-Encoders/Decoders in C#
+a library of encoders/decoders in C#
 ---
