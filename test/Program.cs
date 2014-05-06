@@ -13,9 +13,9 @@ namespace test
         static void Main(string[] args)
         {
             Class1 rle = new Class1(); // TODO: Initialize to an appropriate value
-            string in_f = "C:/Users/chad/rep/encoder/TestRLE/files/ex-1.pbm";
-            string out_f = "C:/Users/chad/rep/encoder/TestRLE/files/ex.dec";
-            string out_temp = "C:/Users/chad/rep/encoder/TestRLE/files/ex.enc";
+            string in_f = "C:/Users/chad/rep/encoder/test/files/ex-1.pbm";
+            string out_f = "C:/Users/chad/rep/encoder/test/files/ex.dec";
+            string out_temp = "C:/Users/chad/rep/encoder/test/files/ex.enc";
             rle.rle_encode(in_f, out_temp);
             rle.rle_decode(out_temp, out_f);
             Debug.Assert(FileCompare(in_f, out_f));
