@@ -12,3 +12,5 @@ C:\Users\chad\rep\encoder\test\bin\Debug\rle.pdb
 C:\Users\chad\rep\encoder\test\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\chad\rep\encoder\test\obj\x86\Debug\test.exe
 C:\Users\chad\rep\encoder\test\obj\x86\Debug\test.pdb
+C:\Users\chad\rep\encoder\test\bin\Debug\huff.dll
+C:\Users\chad\rep\encoder\test\bin\Debug\huff.pdb

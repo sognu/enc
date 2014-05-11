@@ -33,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>test.t_huff</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,10 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="t_huff.cs" />
+    <Compile Include="t_rle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\huff\huff.csproj">
+      <Project>{C89E55DB-BBD6-4192-98FF-0B0D43E7BC78}</Project>
+      <Name>huff</Name>
+    </ProjectReference>
     <ProjectReference Include="..\rle\rle.csproj">
       <Project>{09F6F2B1-0B2F-4ADA-90A6-838E89294936}</Project>
       <Name>rle</Name>

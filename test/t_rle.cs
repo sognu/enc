@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 namespace test
 {
-    class Program
+    class t_rle
     {
         static void Main(string[] args)
         {
@@ -16,8 +16,8 @@ namespace test
             string in_f = "C:/Users/chad/rep/encoder/test/files/ex-1.pbm";
             string out_f = "C:/Users/chad/rep/encoder/test/files/ex.dec";
             string out_temp = "C:/Users/chad/rep/encoder/test/files/ex.enc";
-            rle.rle_encode(in_f, out_temp);
-            rle.rle_decode(out_temp, out_f);
+            rle.encode(in_f, out_temp);
+            rle.decode(out_temp, out_f);
             Debug.Assert(FileCompare(in_f, out_f));
         }
 

@@ -15,7 +15,7 @@ namespace rle
 
 
         // Bit level rle encoder
-        public int rle_encode(string in_f, string out_f)
+        public int encode(string in_f, string out_f)
         {
             byte[] file;
             file = validate_rdr(in_f);
@@ -70,7 +70,7 @@ namespace rle
             return 1;
         }
 
-        public int rle_decode(string in_f, string out_f)
+        public int decode(string in_f, string out_f)
         {
             byte[] file;
             file = validate_rdr(in_f);
