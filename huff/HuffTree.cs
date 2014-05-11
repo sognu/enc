@@ -8,11 +8,11 @@ namespace Huff
     public class HuffTree
     {
 
-        public List<Node> Tree { get; set; }
+        public List<Node> Nodes { get; set; }
 
         public HuffTree()
         {
-            Tree = new List<Node>();
+            Nodes = new List<Node>();
 
         }
 
@@ -31,24 +31,59 @@ namespace Huff
             return 0;
         }
 
-        private int MkTree(HuffTable t)
+        private void MkTree(HuffTable t)
         {
-            while (Tree.Count > 1)
+            int index = 0;
+
+            Nodes = t.Table;
+
+            while (Nodes.Count > 1)
             {
-
-                if (t.Table.Count > 2)
-                {
-
-
-
-
-                }
-
-                
+                Combine(Nodes[index], Nodes[index + 1], index);
             }
-
-            return 0;
         }
-        
+
+        private void Combine(Node a, Node b, int index)
+        {
+            Node parent = new Node
+            {
+                Symbol = -1,
+                Count = a.Count + b.Count,
+                Left = Greater(a, b),
+                Right = Lesser(a, b)
+            };
+
+            Nodes.Remove(a);
+            Nodes.Remove(b);
+            InsertParent(parent);
+        }
+
+        private void InsertParent(Node parent)
+        {
+            int i = 0;
+
+            while (i <= Nodes.Count)
+            {
+                if (i == Nodes.Count) { Nodes.Add(parent); break; }
+
+                else if (Nodes[i].Count >= parent.Count)
+                {
+                    Nodes.Insert(i, parent);
+                    break;
+                }
+                i++;
+            }
+        }
+
+        private Node Greater(Node a, Node b)
+        {
+            return a.Count >= b.Count ? a : b;
+        }
+
+        private Node Lesser(Node a, Node b)
+        {
+            return a.Count < b.Count ? a : b;
+        }
     }
 }
+
