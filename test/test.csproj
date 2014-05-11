@@ -8,7 +8,7 @@
     <ProjectGuid>{974581FF-CEB4-4BE8-B087-0F0E5A86A78B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>test</RootNamespace>
+    <RootNamespace>Test</RootNamespace>
     <AssemblyName>test</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>test.t_huff</StartupObject>
+    <StartupObject>Test.Huff</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,14 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="t_huff.cs" />
-    <Compile Include="t_rle.cs" />
+    <Compile Include="Huff.cs" />
+    <Compile Include="RLE.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\huff\huff.csproj">
+    <ProjectReference Include="..\huff\Huff.csproj">
       <Project>{C89E55DB-BBD6-4192-98FF-0B0D43E7BC78}</Project>
-      <Name>huff</Name>
+      <Name>Huff</Name>
     </ProjectReference>
     <ProjectReference Include="..\rle\rle.csproj">
       <Project>{09F6F2B1-0B2F-4ADA-90A6-838E89294936}</Project>

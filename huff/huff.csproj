@@ -8,7 +8,7 @@
     <ProjectGuid>{C89E55DB-BBD6-4192-98FF-0B0D43E7BC78}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>huff</RootNamespace>
+    <RootNamespace>Huff</RootNamespace>
     <AssemblyName>huff</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -40,9 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="h_main.cs" />
-    <Compile Include="h_table.cs" />
-    <Compile Include="h_tree.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="HuffTable.cs" />
+    <Compile Include="HuffTree.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

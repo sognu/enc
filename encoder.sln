@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rle", "rle\rle.csproj", "{09F6F2B1-0B2F-4ADA-90A6-838E89294936}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{974581FF-CEB4-4BE8-B087-0F0E5A86A78B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "test\Test.csproj", "{974581FF-CEB4-4BE8-B087-0F0E5A86A78B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{045274F5-55D1-4AEB-9E73-14298071AE03}"
 	ProjectSection(SolutionItems) = preProject
@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "huff", "huff\huff.csproj", "{C89E55DB-BBD6-4192-98FF-0B0D43E7BC78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Huff", "huff\Huff.csproj", "{C89E55DB-BBD6-4192-98FF-0B0D43E7BC78}"
 EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution

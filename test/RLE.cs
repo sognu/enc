@@ -2,25 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using rle;
 using System.IO;
 using System.Diagnostics;
-using huff;
 
-
-namespace test
+namespace Test
 {
-    class t_huff
+    class RLE
     {
         static void Main(string[] args)
         {
-            h_main huff = new h_main(); // TODO: Initialize to an appropriate value
-            string in_f = "C:/Users/chad/rep/encoder/test/files/ex-1.txt";
-            ///string out_f = "C:/Users/chad/rep/encoder/test/files/ex.dec";
-            string out_temp = "C:/Users/chad/rep/encoder/test/files/ex.table";
-            huff.encode(in_f, out_temp);
-
-            //huff.decode(out_temp, out_f);
-            //Debug.Assert(FileCompare(in_f, out_f));
+            Class1 rle = new Class1(); // TODO: Initialize to an appropriate value
+            string in_f = "C:/Users/chad/rep/encoder/test/files/ex-1.pbm";
+            string out_f = "C:/Users/chad/rep/encoder/test/files/ex.dec";
+            string out_temp = "C:/Users/chad/rep/encoder/test/files/ex.enc";
+            rle.encode(in_f, out_temp);
+            rle.decode(out_temp, out_f);
+            Debug.Assert(FileCompare(in_f, out_f));
         }
 
         // This method accepts two strings the represent two files to 
@@ -77,5 +75,6 @@ namespace test
             // the same.
             return ((file1byte - file2byte) == 0);
         }
+
     }
 }
